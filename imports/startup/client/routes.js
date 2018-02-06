@@ -9,12 +9,6 @@ import '../../ui/pages/login/login.js';
 
 // Set up all routes in the app
 FlowRouter.route('/', {
-  // FlowRouter.route('/login' {
-  triggersEnter: [(context, redirect) => {
-  if(!Meteor.user.profile == 'admin'){
-    redirect('/login');
-  }
-  }],
   name: 'App.home',
   action() {
     BlazeLayout.render('App_body', { main: 'App_home' });
@@ -38,7 +32,13 @@ FlowRouter.route('/login', {
 
 //=================== ADMIN ROUTES ======================================//
 // Start the admin routes definitions
-var adminRoutes = FlowRouter.group({
+const adminRoutes = FlowRouter.group({
   prefix: '/admin',
-  name: 'admin'
+  name: 'admin',
+  triggersEnter: [(context, redirect) => {
+    if (Meteor.user().profile == 'true') {
+      redirect('/login');
+    }
+  }],
+
 });
