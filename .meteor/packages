@@ -27,3 +27,4 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 accounts-base
 accounts-ui
 accounts-password
+alexwine:bootstrap-4

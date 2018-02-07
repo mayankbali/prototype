@@ -1,0 +1,50 @@
+<template name="admin_home">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        {{> main_navbar}}
+      </div>
+      <div class="col-md-2">
+        {{> navbar}}
+      </div>
+      <div class="col-md-10">
+        {{> booking}}
+      </div>
+    </div>
+  </div>
+
+</template>
+<template name="booking">
+  <div class="container">
+   <form action="action_page.php">
+
+   <h1> Add a Restaurant </h1>
+
+   <label for="rname">Restaurant Name</label>
+   <input type="text" id="rname" name="restaurantname" placeholder="Restaurant name"><br>
+
+   <label for="address">Address</label>
+   <input type="text" id="address" name="address" placeholder="Address"><br>
+
+   <label for="authpname">Authorized Person Name</label>
+   <input type="text" id="authpname" name="authpname" placeholder="Authorized Person Name"><br>
+
+   <label for="authpcontact">Authorized Person Contact</label>
+   <input type="text" id="authpname" name="authpname" placeholder="Authorized Person Name"><br>
+
+   <!-- <label for="country">Country</label>
+   <select id="country" name="country">
+     <option value="australia">Australia</option>
+     <option value="canada">Canada</option>
+     <option value="usa">USA</option>
+   </select>
+
+   <label for="subject">Subject</label>
+   <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
+
+   <input type="submit" value="Submit">
+
+ </form>
+  </div>
+</template>
