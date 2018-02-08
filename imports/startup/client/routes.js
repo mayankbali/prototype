@@ -7,6 +7,7 @@ import '../../ui/pages/home/home.js';
 import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/login/login.js';
 import '../../ui/pages/admin_home/admin_home.js';
+import '../../ui/pages/show_restaurants/show_restaurants.js';
 
 
 import '../../ui/components/navbar/navbar.js';
@@ -14,12 +15,6 @@ import '../../ui/components/main_navbar/main_navbar.js';
 
 // Set up all routes in the app
 FlowRouter.route('/', {
-  // FlowRouter.route('/login' {
-  triggersEnter: [function(context, redirect) {
-  if(Meteor.user().profile.admin == 'true'){
-    redirect('/login');
-  }
-  }],
   name: 'App.home',
   action() {
     BlazeLayout.render('App_body', { main: 'App_home' });
@@ -51,6 +46,12 @@ var adminRoutes = FlowRouter.group({
 adminRoutes.route('/', {
   action() {
     BlazeLayout.render('App_body', { main : 'admin_home'});
+  }
+});
+
+adminRoutes.route('/show_restaurants', {
+  action() {
+    BlazeLayout.render('App_body', { main :'shre1'});
   }
 });
 

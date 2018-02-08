@@ -1,0 +1,27 @@
+<template name="shre1">
+
+  {{> show_restaurants}}
+</template>
+
+<template name="show_restaurants">
+    <div class="">
+      {{#each admin_home}}
+      <div class="card">
+
+        <div class="card-content">
+          <h4>{{hjg}} <br> </h4>
+          <h4>{{hjd}} <br></h4>
+          <h4>{{hje}} <br> </h4>
+
+          <div class="rating">
+            <div class="space">
+              <h4><img src="../img/online/rupee.png" alt="Los Angeles" > {{hjk}} </h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+</template>
