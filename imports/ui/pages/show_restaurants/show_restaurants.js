@@ -13,6 +13,7 @@ Template.show_restaurants.onRendered(function(){
 
  Template.show_restaurants.helpers({
       admin_home: function(){
+          console.log("hello");
       return Admin_home.find({}, { sort: { createdAt: -1 } });
 
       }
