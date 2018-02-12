@@ -27,7 +27,7 @@ import { Tracker } from 'meteor/tracker'
 
   Deps.autorun(function(){
     if(Meteor.user()){
-      FlowRouter.go("/login");
+      FlowRouter.go("/admin");
     console.log("User is logged  in");
   }
     else {

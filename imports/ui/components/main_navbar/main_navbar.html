@@ -4,7 +4,12 @@
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" href="#">Sign out</a>
+        {{#if currentUser}}
+          <a class="nav-link logout" href="/" id="logout-link"><i class="fa fa-sign-out"></i>Sign out</a>
+        {{else}}
+        <a class="" href="/" id="login-link"><i class="fa fa-sign-in"></i></a>
+        {{/if}}
+
       </li>
     </ul>
   </nav>
